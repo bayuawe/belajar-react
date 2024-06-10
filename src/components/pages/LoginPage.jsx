@@ -5,7 +5,7 @@ import FormLogin from "../Fragments/FormLogin";
 
 const LoginPage = () => {
   return (
-    <AuthLayouts title="Login" subtitle="Welcome Back">
+    <AuthLayouts title="Login" subtitle="Welcome Back" type="login">
       <FormLogin action="" />
     </AuthLayouts>
   );

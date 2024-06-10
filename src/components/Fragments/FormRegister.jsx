@@ -2,7 +2,6 @@ import React from "react";
 import Label from "@/components/Elements/Input/Label";
 import Input from "@/components/Elements/Input/Input";
 import Button from "../Elements/Button";
-import { Link } from "react-router-dom";
 
 const FormRegister = (props) => {
   const { label, name, type, placeholder, action } = props;
@@ -33,14 +32,6 @@ const FormRegister = (props) => {
         />
       </div>
       <Button variant="bg-yellow-400 w-full" text="Register" />
-      <div className="mt-4 flex justify-center">
-        <p className="text-sm text-slate-500">
-          Have an account?{" "}
-          <Link to="/login" className="text-yellow-400 font-bold">
-            Login
-          </Link>
-        </p>
-      </div>
     </form>
   );
 };
