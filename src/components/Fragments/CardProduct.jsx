@@ -3,7 +3,7 @@ import React from "react";
 const CardProduct = (props) => {
   const { children } = props;
   return (
-    <div className="w-full max-w-sm rounded-xl shadow-lg flex flex-col m-4 min-h-full py-2">
+    <div className="w-full max-w-sm rounded-xl shadow-xl flex flex-col m-4 min-h-full">
       {children}
     </div>
   );
@@ -12,7 +12,7 @@ const CardProduct = (props) => {
 const HeaderProduct = (props) => {
   const { image } = props;
   return (
-    <div className="flex flex-col justify-center items-center w-full py-4">
+    <div className="flex flex-col justify-center items-center w-full p-4">
       <a
         href="#"
         className="flex justify-center items-center rounded-md overflow-hidden"
@@ -30,7 +30,7 @@ const BodyProduct = (props) => {
       <a href="#" className="w-full text-center">
         <h1 className="text-yellow-400 text-2xl font-bold py-2">{name}</h1>
       </a>
-      <p className="text-gray-700 text-justify py-2">{description}</p>
+      <p className="text-gray-700 text-center py-2">{description}</p>
     </div>
   );
 };
