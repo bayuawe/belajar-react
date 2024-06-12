@@ -26,7 +26,7 @@ const AuthLayouts = ({
                 Login
               </Link>
             )}
-          </p>
+          </p> 
         </div>
       </div>
     </div>
