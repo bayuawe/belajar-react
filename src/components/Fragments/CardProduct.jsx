@@ -3,42 +3,34 @@ import React from "react";
 const CardProduct = (props) => {
   const { children } = props;
   return (
-    <>
-      <HeaderProduct />
-      <BodyProduct />
-      <FooterProduct />
-    </>
+    <div className="w-full max-w-sm rounded-xl shadow-lg flex flex-col m-4 min-h-full py-2">
+      {children}
+    </div>
   );
 };
 
-const HeaderProduct = () => {
+const HeaderProduct = (props) => {
+  const { image } = props;
   return (
-    <div className="flex flex-col justify-center items-center w-full">
-      <a href="#" className="flex justify-center items-center rounded-md">
-        <img
-          src="./public/images/shoes-1.jpg"
-          alt="product"
-          className="object-cover"
-        />
+    <div className="flex flex-col justify-center items-center w-full py-4">
+      <a
+        href="#"
+        className="flex justify-center items-center rounded-md overflow-hidden"
+      >
+        <img src={image} alt="product" className="object-cover w-full h-48" />
       </a>
     </div>
   );
 };
 
-const BodyProduct = () => {
+const BodyProduct = (props) => {
+  const { name, description } = props;
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-yellow-400 text-3xl font-bold py-2">Sepatu</h1>
-      </div>
-      <div className="flex flex-col justify-center">
-        <p className="text-yellow-400 font-bold py-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde.
-          Consequuntur, placeat optio aliquid quisquam enim corporis
-          reprehenderit magni tempore ab atque, dolorum velit ea? Est commodi
-          minus placeat eaque.
-        </p>
-      </div>
+    <div className="px-4 flex flex-col items-center flex-grow">
+      <a href="#" className="w-full text-center">
+        <h1 className="text-yellow-400 text-2xl font-bold py-2">{name}</h1>
+      </a>
+      <p className="text-gray-700 text-justify py-2">{description}</p>
     </div>
   );
 };
@@ -46,13 +38,16 @@ const BodyProduct = () => {
 const FooterProduct = (props) => {
   const { price } = props;
   return (
-    <div className="flex flex-row justify-between items-center">
-      <h1 className="text-yellow-400 text-3xl font-bold py-2">{price}</h1>
-      <button className="bg-yellow-400 text-white px-4 py-2 rounded-md" type="submit">
+    <div className="flex flex-row justify-between items-center mt-auto p-4">
+      <span className="text-yellow-400 text-2xl font-bold">{price}</span>
+      <button
+        className="bg-yellow-400 text-white px-4 py-2 rounded-md"
+        type="submit"
+      >
         Add to Cart
       </button>
     </div>
-  ); 
+  );
 };
 
 CardProduct.HeaderProduct = HeaderProduct;
